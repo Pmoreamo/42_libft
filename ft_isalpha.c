@@ -6,7 +6,7 @@
 /*   By: pmorello <pmorello@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 11:30:41 by pmorello          #+#    #+#             */
-/*   Updated: 2024/02/17 09:20:31 by pmorello         ###   ########.fr       */
+/*   Updated: 2026/05/17 00:45:40 by pmorello         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-	{
+	unsigned char res;
+
+	res = c;
+	if ((res >= 'a' && res <= 'z') || (res >= 'A' && res <= 'Z'))
 		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }

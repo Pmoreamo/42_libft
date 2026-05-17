@@ -6,7 +6,7 @@
 /*   By: pmorello <pmorello@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 14:48:38 by pmorello          #+#    #+#             */
-/*   Updated: 2024/02/17 14:57:40 by pmorello         ###   ########.fr       */
+/*   Updated: 2026/05/17 01:04:20 by pmorello         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c > 47 && c < 58) || (c > 64 && c < 91) || (c > 96 && c < 123))
+	unsigned char res;
+	
+	res = c;
+	if ((res >= '0' && res <= '9') || (res >= 'A' && res <='Z') 
+		|| (res >='a' && res <= 'z'))
 		return (1);
-	else
-		return (0);
+	return (res);
 }

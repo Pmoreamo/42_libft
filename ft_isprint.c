@@ -6,7 +6,7 @@
 /*   By: pmorello <pmorello@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 14:56:09 by pmorello          #+#    #+#             */
-/*   Updated: 2024/02/17 09:53:09 by pmorello         ###   ########.fr       */
+/*   Updated: 2026/05/17 01:10:42 by pmorello         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 int	ft_isprint(int c)
 {
-	if (c > 31 && c < 127)
-	{
+	unsigned char res;
+
+	res = c;
+	if (res >= ' ' && res <= '~')
 		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }

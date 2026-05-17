@@ -6,18 +6,13 @@
 /*   By: pmorello <pmorello@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 14:27:06 by pmorello          #+#    #+#             */
-/*   Updated: 2024/02/17 18:01:58 by pmorello         ###   ########.fr       */
+/*   Updated: 2026/05/17 01:06:41 by pmorello         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c > -1 && c < 128)
-	{
+	if (c >= '\0' && c <= '~')
 		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
